@@ -1,25 +1,9 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 
-// Material Kit 2 React components
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
@@ -103,14 +87,14 @@ function Footer() {
               </MKBox>
             </Stack>
             <MKTypography variant="button" opacity={0.8}>
-              Copyright © <script>document.write(new Date().getFullYear())</script>2021 Material
-              Design by Creative Tim.
+              {`Derechos de autor © ${new Date()
+                .getFullYear()
+                .toString()} | Diseñado por Edwins Vargas.`}
             </MKTypography>
           </Grid>
           <Grid item xs={12} lg={6} ml="auto" textAlign={{ xs: "center", lg: "right" }}>
             <MKTypography variant="body1" fontWeight="bold" mb={6} sx={{ fontSize: "1.125rem" }}>
-              The reward for getting on the stage is fame. The price of fame is you can&apos;t get
-              off the stage.
+              {`La recompensa por subir al escenario es la fama. El precio de la fama es no poder bajar del escenario.`}
             </MKTypography>
             <MKTypography
               component={Link}

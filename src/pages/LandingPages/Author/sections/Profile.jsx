@@ -1,47 +1,58 @@
-/*
-=========================================================
-* Material Kit 2 React - v2.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/material-kit-react
-* Copyright 2023 Creative Tim (https://www.creative-tim.com)
-
-Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*/
-
-// @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
-
-// Material Kit 2 React components
+//
 import MKBox from "components/MKBox";
 import MKAvatar from "components/MKAvatar";
 import MKButton from "components/MKButton";
 import MKTypography from "components/MKTypography";
-
-// Images
 import profilePicture from "assets/images/bruce-mars.jpg";
+//
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import MusicNoteIcon from "@mui/icons-material/MusicNote";
 
 function Profile() {
   return (
     <MKBox component="section" py={{ xs: 6, sm: 12 }}>
       <Container>
         <Grid container item xs={12} justifyContent="center" mx="auto">
-          <MKBox mt={{ xs: -16, md: -20 }} textAlign="center">
-            <MKAvatar src={profilePicture} alt="Burce Mars" size="xxl" shadow="xl" />
+          <MKBox mt={{ xs: -16, md: -40 }} textAlign="center">
+            <MKAvatar
+              src={profilePicture}
+              alt="Burce Mars"
+              style={{ width: "400px", height: "400px" }}
+              shadow="xl"
+            />
           </MKBox>
           <Grid container justifyContent="center" py={6}>
             <Grid item xs={12} md={7} mx={{ xs: "auto", sm: 6, md: 1 }}>
               <MKBox display="flex" justifyContent="space-between" alignItems="center" mb={1}>
-                <MKTypography variant="h3">Michael Roven</MKTypography>
-                <MKButton variant="outlined" color="info" size="small">
-                  Follow
-                </MKButton>
+                <MKTypography variant="h2">GC EL ILUSIONISTA</MKTypography>
+                <Grid>
+                  <MKButton
+                    style={{ marginRight: "10px" }}
+                    variant="outlined"
+                    color="info"
+                    size="small"
+                  >
+                    <FacebookIcon sx={{ mr: 0.5 }} />
+                    Facebook
+                  </MKButton>
+                  <MKButton
+                    style={{ marginRight: "10px" }}
+                    variant="outlined"
+                    color="primary"
+                    size="small"
+                  >
+                    <InstagramIcon sx={{ mr: 0.5 }} />
+                    Instagram
+                  </MKButton>
+                  <MKButton variant="outlined" color="dark" size="small">
+                    <MusicNoteIcon sx={{ mr: 0.5 }} />
+                    Tiktok
+                  </MKButton>
+                </Grid>
               </MKBox>
               <Grid container spacing={3} mb={3}>
                 <Grid item>
@@ -49,7 +60,7 @@ function Profile() {
                     323&nbsp;
                   </MKTypography>
                   <MKTypography component="span" variant="body2" color="text">
-                    Posts
+                    Publicaciones
                   </MKTypography>
                 </Grid>
                 <Grid item>
@@ -57,7 +68,7 @@ function Profile() {
                     3.5k&nbsp;
                   </MKTypography>
                   <MKTypography component="span" variant="body2" color="text">
-                    Followers
+                    Seguidores
                   </MKTypography>
                 </Grid>
                 <Grid item>
@@ -65,14 +76,18 @@ function Profile() {
                     260&nbsp;
                   </MKTypography>
                   <MKTypography component="span" variant="body2" color="text">
-                    Following
+                    Temas musicales
                   </MKTypography>
                 </Grid>
               </Grid>
               <MKTypography variant="body1" fontWeight="light" color="text">
-                Decisions: If you can&apos;t decide, the answer is no. If two equally difficult
-                paths, choose the one more painful in the short term (pain avoidance is creating an
-                illusion of equality). Choose the path that leaves you more equanimous. <br />
+                {`Letrista, cántate, rapero, mago, dibujante, pintor, deportista Yo soy GC; 
+                  es la abreviación de mis dos apellidos Giménez Correia, así represento a mis dos familias. 
+                  Te doy la bienvenida a mi canal espero disfrutes de mis canciones pues son hechas con mucho esmero y dedicación, 
+                  cada letra lleva un sentimiento ya sea amor, odio, rencor, alegría o cualquier otro, 
+                  esa es mi misión transmitirte algún sentimiento o dejarte algunos valores morales 
+                  🤘🏼🍃 YO SOY GC, MUCHO GUSTO!`}{" "}
+                <br />
                 <MKTypography
                   component="a"
                   href="#"
@@ -95,7 +110,7 @@ function Profile() {
                     },
                   }}
                 >
-                  More about me <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
+                  Más sobre mí <Icon sx={{ fontWeight: "bold" }}>arrow_forward</Icon>
                 </MKTypography>
               </MKTypography>
             </Grid>
